@@ -1,0 +1,39 @@
+{
+    "server": {
+        "index": {
+            "port": 8085
+        }
+    },
+    "logging": {
+        "label"         : "productInfo",
+        "consoleLevel"  : "debug",
+        "fileLevel"     : "debug",
+        "enviroment"    : "development"
+    },
+    "database": {
+        "mysqlMaster"    : {
+            "host"           : "localhost",
+            "port"           : "8889",
+            "user"           : "root",
+            "password"       : "root",
+            "database"       : "productInfo",
+            "acquireTimeout" : 10000,
+            "connectionLimit": 100,
+            "insecureAuth"   : true
+        },
+        "mysqlReadSlave" : {
+            "host"           : "localhost",
+            "port"           : "8889",
+            "user"           : "root",
+            "password"       : "root",
+            "database"       : "productInfo",
+            "acquireTimeout" : 10000,
+            "connectionLimit": 100,
+            "insecureAuth"   : true
+        }
+    },
+    "currencyRate" : {
+        "host": "http://api.currencylayer.com/live?format=1",
+        "apiKey": "54015fefc224d11666539bde2fa1c6f9"
+    }
+}
